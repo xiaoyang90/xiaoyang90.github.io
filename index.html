@@ -86,21 +86,12 @@
         <h2 id="什么是图像的阈值分割？what-is-iamge-thresholding"><a href="#什么是图像的阈值分割？what-is-iamge-thresholding" class="headerlink" title="什么是图像的阈值分割？what is iamge thresholding?"></a>什么是图像的阈值分割？what is iamge thresholding?</h2><p><img src="https://raw.githubusercontent.com/spmallick/learnopencv/master/Threshold/threshold.png" alt="thresholded image"><br>上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。<br>例如：<br>if src(x,y) &gt; thresh:</p>
 <pre><code>dst(x,y) = maxValue
 </code></pre><p>else:<br>    dst(x,y) = 0</p>
-<blockquote>
-<ol>
-<li>Binary Thresholding(type = THRESH_BINARY)<br><strong> Python </strong><pre><code>import cv2  
-src = cv2.imread(&quot;threshold.png&quot;,cv2.IMREAD_GRAYSCALE)  
-thresh = 0  
-maxValue = 255  
-th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)
-</code></pre></li>
-</ol>
-</blockquote>
+<p>##<em> Binary Thresholding(type = THRESH_BINARY)</em><br><strong> Python </strong><br>        import cv2<br>        src = cv2.imread(“threshold.png”,cv2.IMREAD_GRAYSCALE)<br>        thresh = 0<br>        maxValue = 255<br>        th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpbyc5b0000jcv9o58w6mze" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpc081h0000kcv9bxpf5mdm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -145,7 +136,7 @@ th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="ciqpbyc5b0001jcv9oowg8kux" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="ciqpc081x0001kcv9cpdkxauy" class="article-share-link">Share</a>
       
       
     </footer>
