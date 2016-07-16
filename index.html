@@ -88,18 +88,19 @@
 </code></pre><p>else:<br>    dst(x,y) = 0</p>
 <blockquote>
 <ol>
-<li>Binary Thresholding(type = THRESH_BINARY)</li>
+<li>Binary Thresholding(type = THRESH_BINARY)<br> <strong> Python </strong><pre><code>import cv2  
+src = cv2.imread(&quot;threshold.png&quot;,cv2.IMREAD_GRAYSCALE)  
+thresh = 0  
+maxValue = 255  
+th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)
+</code></pre></li>
 </ol>
-<ul>
-<li><strong> Python </strong></li>
-<li>import cv2<br>src = cv2.imread(“threshold.png”,cv2.IMREAD_GRAYSCALE)<br>thresh = 0<br>maxValue = 255<br>th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)</li>
-</ul>
 </blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpbp6uk0000dcv9h13gdvxh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpbteii000094v90981dzhf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="ciqpbp6v00001dcv9282w1tol" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="ciqpbteii000194v9gczw5sg9" class="article-share-link">Share</a>
       
       
     </footer>
