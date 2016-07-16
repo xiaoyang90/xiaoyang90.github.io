@@ -14,7 +14,7 @@ dst(x,y) = ma">
 <meta property="og:description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：if src(x,y) &amp;gt; thresh:
 dst(x,y) = ma">
 <meta property="og:image" content="https://raw.githubusercontent.com/spmallick/learnopencv/master/Threshold/threshold.png">
-<meta property="og:updated_time" content="2016-07-16T15:26:24.310Z">
+<meta property="og:updated_time" content="2016-07-16T15:30:15.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image thresholding">
 <meta name="twitter:description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：if src(x,y) &amp;gt; thresh:
@@ -95,7 +95,7 @@ dst(x,y) = ma">
 </code></pre><p>else:<br>    dst(x,y) = 0</p>
 <blockquote>
 <ol>
-<li>Binary Thresholding(type = THRESH_BINARY)<br> <strong> Python </strong><pre><code>import cv2  
+<li>Binary Thresholding(type = THRESH_BINARY)<br><strong> Python </strong><pre><code>import cv2  
 src = cv2.imread(&quot;threshold.png&quot;,cv2.IMREAD_GRAYSCALE)  
 thresh = 0  
 maxValue = 255  
@@ -107,7 +107,7 @@ th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpbteii000094v90981dzhf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpbyc5b0000jcv9o58w6mze" class="article-share-link">Share</a>
       
       
     </footer>
