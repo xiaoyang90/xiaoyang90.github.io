@@ -5,20 +5,23 @@
   
   <title>Image thresholding | 杨萍的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：if src(x,y) &amp;gt; thresh:
-dst(x,y) = ma">
+  <meta name="description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：
+if src(x,y) &amp;gt; thresh:
+dst(x,y) = m">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Image thresholding">
 <meta property="og:url" content="http://yoursite.com/2016/07/16/Image-thresholding/index.html">
 <meta property="og:site_name" content="杨萍的博客">
-<meta property="og:description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：if src(x,y) &amp;gt; thresh:
-dst(x,y) = ma">
+<meta property="og:description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：
+if src(x,y) &amp;gt; thresh:
+dst(x,y) = m">
 <meta property="og:image" content="https://raw.githubusercontent.com/spmallick/learnopencv/master/Threshold/threshold.png">
-<meta property="og:updated_time" content="2016-07-17T02:37:55.580Z">
+<meta property="og:updated_time" content="2016-07-17T02:39:32.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image thresholding">
-<meta name="twitter:description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：if src(x,y) &amp;gt; thresh:
-dst(x,y) = ma">
+<meta name="twitter:description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：
+if src(x,y) &amp;gt; thresh:
+dst(x,y) = m">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/spmallick/learnopencv/master/Threshold/threshold.png">
   
     <link rel="alternate" href="/atom.xml" title="杨萍的博客" type="application/atom+xml">
@@ -90,7 +93,8 @@ dst(x,y) = ma">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是图像的阈值分割？what-is-iamge-thresholding"><a href="#什么是图像的阈值分割？what-is-iamge-thresholding" class="headerlink" title="什么是图像的阈值分割？what is iamge thresholding?"></a>什么是图像的阈值分割？what is iamge thresholding?</h2><p><img src="https://raw.githubusercontent.com/spmallick/learnopencv/master/Threshold/threshold.png" alt="thresholded image"><br>上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。<br>例如：<br>if src(x,y) &gt; thresh:</p>
+        <h2 id="什么是图像的阈值分割？what-is-iamge-thresholding"><a href="#什么是图像的阈值分割？what-is-iamge-thresholding" class="headerlink" title="什么是图像的阈值分割？what is iamge thresholding?"></a>什么是图像的阈值分割？what is iamge thresholding?</h2><p><img src="https://raw.githubusercontent.com/spmallick/learnopencv/master/Threshold/threshold.png" alt="thresholded image"><br>上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。<br>例如：</p>
+<p>if src(x,y) &gt; thresh:</p>
 <pre><code>dst(x,y) = maxValue
 </code></pre><p>else:<br>    dst(x,y) = 0</p>
 <ol>
@@ -106,7 +110,7 @@ th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpzszzv0001ksv9pn3b4x9p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpzv2oe0000ksv9pibtp3ex" class="article-share-link">Share</a>
       
       
     </footer>
