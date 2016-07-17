@@ -85,8 +85,7 @@
       
         <h2 id="什么是图像的阈值分割？what-is-iamge-thresholding"><a href="#什么是图像的阈值分割？what-is-iamge-thresholding" class="headerlink" title="什么是图像的阈值分割？what is iamge thresholding?"></a>什么是图像的阈值分割？what is iamge thresholding?</h2><p><img src="https://raw.githubusercontent.com/spmallick/learnopencv/master/Threshold/threshold.png" alt="thresholded image"><br>上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。<br>例如：<br>if src(x,y) &gt; thresh:</p>
 <pre><code>dst(x,y) = maxValue
-</code></pre><p>else:<br>    dst(x,y) = 0</p>
-<p>##<em> Binary Thresholding(type = THRESH_BINARY)</em><br><strong> Python </strong></p>
+</code></pre><p>else:<br>    dst(x,y) = 0<br><strong><em> binary Thresholding(type = THRESH_BINARY)</em></strong><br><strong> Python </strong></p>
 <pre><code>import cv2  
 src = cv2.imread(&quot;threshold.png&quot;,cv2.IMREAD_GRAYSCALE)  
 thresh = 0  
@@ -96,7 +95,7 @@ th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpzg84y0000z0v91femaebw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqpzrcsc0000a8v9fo1l0ljs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,7 +140,7 @@ th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_BINARY)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="ciqpzg85t0001z0v9oinibw79" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="ciqpzrcsc0001a8v9pyg424x7" class="article-share-link">Share</a>
       
       
     </footer>
