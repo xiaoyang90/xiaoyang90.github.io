@@ -23,7 +23,7 @@ if src(x,y) &amp;gt; thresh:
 <meta property="og:image" content="http://www.learnopencv.com/wp-content/uploads/2015/02/opencv-thresh-trunc.jpg">
 <meta property="og:image" content="http://www.learnopencv.com/wp-content/uploads/2015/02/opencv-thresh-tozero.jpg">
 <meta property="og:image" content="http://www.learnopencv.com/wp-content/uploads/2015/02/opencv-thresh-to-zero-inv.jpg">
-<meta property="og:updated_time" content="2016-07-17T03:11:50.051Z">
+<meta property="og:updated_time" content="2016-07-17T03:13:32.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image thresholding">
 <meta name="twitter:description" content="什么是图像的阈值分割？what is iamge thresholding?上图中的数字的灰度值和该数相同，255最亮，5最暗。所有的阈值算法都有一个源图像（src），阈值（thresh）最为输入以及一个输出图像（dst），如果src（x，y）&amp;gt;thresh，则dst为指定为某个值，否则，被指定为另外的某些值。例如：
@@ -133,18 +133,18 @@ else
 <p> threshold(src,dst,thresh,maxValue,THRES_TRUNC)<br><img src="http://www.learnopencv.com/wp-content/uploads/2015/02/opencv-thresh-trunc.jpg" alt="图4 Truncate thresholding(thresh =127)"></p>
 </li>
 <li><p><em>*</em>Threshold to Zero(type = THRESH_TOZERO)<br>Thresholding rule</p>
-<p> if src(x,y) &gt; thresh</p>
-<pre><code>dst(x,y) = src(x,y)
-</code></pre><p> else</p>
-<pre><code>dst(x,y) = 0
+<pre><code>if src(x,y) &gt; thresh
+    dst(x,y) = src(x,y)
+else
+    dst(x,y) = 0
 </code></pre><p><strong> Python</strong></p>
 <p> threshold(src,dst,thresh,maxvalue,THRESH_TOZERO)<br><img src="http://www.learnopencv.com/wp-content/uploads/2015/02/opencv-thresh-tozero.jpg" alt="图5 Threshold to Zero(thresh = 127)"></p>
 </li>
 <li><p><em>*</em>Inverted Threshold to Zero(type = THRESH_TOZERO_INV)<br>Thresholding rule</p>
-<p> if src(x,y) &gt; thresh</p>
-<pre><code>dst(x,y) = 0
-</code></pre><p> else</p>
-<pre><code>dst(x,y) = src(x,y)
+<pre><code>if src(x,y) &gt; thresh
+    dst(x,y) = 0
+else
+    dst(x,y) = src(x,y)
 </code></pre><p><strong> Python</strong></p>
 <p> th,dst = cv2.threshold(src,thresh,maxValue,cv2.THRESH_TOZERO_INV)<br><img src="http://www.learnopencv.com/wp-content/uploads/2015/02/opencv-thresh-to-zero-inv.jpg" alt="图6 Inverted Threshold to Zero(thresh = 127)"></p>
 </li>
@@ -153,7 +153,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqq10m540000jov9k9hvwdn2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="ciqq12uwb0000a4v9sia3olbj" class="article-share-link">Share</a>
       
       
     </footer>
