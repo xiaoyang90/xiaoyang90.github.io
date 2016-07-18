@@ -16,7 +16,7 @@ numpy.fft.rfft(a,n=None,axis=-1,norm=None)
 numpy.fft.rfft(a,n=None,axis=-1,norm=None)
 上面的函数值计算以为离散的快速傅里叶分析，其中">
 <meta property="og:image" content="http://old.sebug.net/paper/books/scipydoc/_images/spectrum_example_01.png">
-<meta property="og:updated_time" content="2016-07-18T13:53:47.712Z">
+<meta property="og:updated_time" content="2016-07-18T13:58:36.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FFT">
 <meta name="twitter:description" content="用FFT能将时域的数字信号转换为频域信号。转换为频域信号之后，可以很方便的分析信号的频率成分，在频域上进行处理，最终还可以将处理的频域信号通过IFFT转换为频域信号，实现许多无法再时域完成的信号处理算法。而且对于空间域上的数字图像，也能通过傅里叶变换为频域类的信号。
@@ -99,12 +99,12 @@ numpy.fft.rfft(a,n=None,axis=-1,norm=None)
       
         <p>用FFT能将时域的数字信号转换为频域信号。转换为频域信号之后，可以很方便的分析信号的频率成分，在频域上进行处理，最终还可以将处理的频域信号通过IFFT转换为频域信号，实现许多无法再时域完成的信号处理算法。而且对于空间域上的数字图像，也能通过傅里叶变换为频域类的信号。<br><img src="http://old.sebug.net/paper/books/scipydoc/_images/spectrum_example_01.png" alt="时域和频域图"></p>
 <pre><code>numpy.fft.rfft(a,n=None,axis=-1,norm=None)
-</code></pre><p>上面的函数值计算以为离散的快速傅里叶分析，其中：a为输入矩阵，n为沿着转换轴的点数，如果n<br>小于输入矩阵的长度，则输入就被剪裁掉，如果n大于输入矩阵，则输入矩阵就会被0填补，如果没有规定n的值，则输入沿着轴的长度由使用的轴给定。<br>如果没给定axis，则使用最后一个轴。返回为一个复杂的ndarray.如果n是偶数 ，转换轴的长度为（n/2）+1.如果n为奇数，则长度为（n+1）/2.<br>对于实值输入，只计算非负频率项。<br>可以通过下面的程序将时域信号转换为频域信号</p>
+</code></pre><p>上面的函数值计算以为离散的快速傅里叶分析，其中：a为输入矩阵，n为沿着转换轴的点数，如果n小于输入矩阵的长度，则输入就被剪裁掉，如果n大于输入矩阵，则输入矩阵就会被0填补，如果没有规定n的值，则输入沿着轴的长度由使用的轴给定。如果没给定axis，则使用最后一个轴。返回为一个复杂的ndarray.如果n是偶数 ，转换轴的长度为（n/2）+1.如果n为奇数，则长度为（n+1）/2.<br>对于实值输入，只计算非负频率项。<br>可以通过下面的程序将时域信号转换为频域信号</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="ciqs3fe6l0000t0v9mu5gskpp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="ciqs3k8w4000068v9gt57oye3" class="article-share-link">Share</a>
       
       
     </footer>
