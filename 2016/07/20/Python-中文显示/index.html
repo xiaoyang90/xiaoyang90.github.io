@@ -3,14 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2016 | 杨萍的博客</title>
+  <title>Python 中文显示 | 杨萍的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="杨萍的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：
+# -*- coding:utf-8 -*-
+声明编码方式为utf-8编码，并且在中文之前添加u，例如：
+plt.xlabel(u&amp;quot;时间&amp;quot;)
+但是仍然出现无法正常显示中文的情况。这时，从matplotlib.fo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 中文显示">
+<meta property="og:url" content="http://yoursite.com/2016/07/20/Python-中文显示/index.html">
 <meta property="og:site_name" content="杨萍的博客">
+<meta property="og:description" content="在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：
+# -*- coding:utf-8 -*-
+声明编码方式为utf-8编码，并且在中文之前添加u，例如：
+plt.xlabel(u&amp;quot;时间&amp;quot;)
+但是仍然出现无法正常显示中文的情况。这时，从matplotlib.fo">
+<meta property="og:updated_time" content="2016-07-20T14:45:23.463Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杨萍的博客">
+<meta name="twitter:title" content="Python 中文显示">
+<meta name="twitter:description" content="在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：
+# -*- coding:utf-8 -*-
+声明编码方式为utf-8编码，并且在中文之前添加u，例如：
+plt.xlabel(u&amp;quot;时间&amp;quot;)
+但是仍然出现无法正常显示中文的情况。这时，从matplotlib.fo">
   
     <link rel="alternate" href="/atom.xml" title="杨萍的博客" type="application/atom+xml">
   
@@ -63,96 +79,62 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/20/Python-中文显示/" class="archive-article-date">
-  <time datetime="2016-07-20T14:08:22.000Z" itemprop="datePublished">7月 20</time>
+        <section id="main"><article id="post-Python-中文显示" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/20/Python-中文显示/" class="article-date">
+  <time datetime="2016-07-20T14:08:22.000Z" itemprop="datePublished">2016-07-20</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/20/Python-中文显示/">Python 中文显示</a>
+    <h1 class="article-title" itemprop="name">
+      Python 中文显示
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/18/FFT/" class="archive-article-date">
-  <time datetime="2016-07-18T08:21:02.000Z" itemprop="datePublished">7月 18</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/18/FFT/">FFT</a>
-    </h1>
-  
+        <p>在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：</p>
+<pre><code># -*- coding:utf-8 -*-
+</code></pre><p>声明编码方式为utf-8编码，并且在中文之前添加u，例如：</p>
+<pre><code>plt.xlabel(u&quot;时间&quot;)
+</code></pre><p>但是仍然出现无法正常显示中文的情况。<br>这时，从matplotlib.font_manager模块中导入FontProperties:</p>
+<pre><code>from matplotlib.font_manager import FontProperties
+</code></pre><p>并且通过以下语句添加中文字体，并且可以更改字体大小：</p>
+<pre><code>font = FontProperties(fname = r&quot;C:\windows\fonts\simsun.ttc&quot;,size = 20)
+</code></pre><p>此时：</p>
+<pre><code>plt.xlabel(u&quot;时间&quot;,fontproperties=font)
+</code></pre><p>就可以正常显示中文了。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/16/Image-thresholding/" class="archive-article-date">
-  <time datetime="2016-07-16T13:24:39.000Z" itemprop="datePublished">7月 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/16/Image-thresholding/">Image thresholding</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/16/hello-world/" class="archive-article-date">
-  <time datetime="2016-07-16T09:21:26.249Z" itemprop="datePublished">7月 16</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="ciqv06n6h0000w0v9cf7nkrqp" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/18/FFT/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">FFT</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
