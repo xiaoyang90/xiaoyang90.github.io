@@ -23,7 +23,7 @@ if x&amp;gt;= 0:
 else:
     return -x
 这里打印看一下-10的绝">
-<meta property="og:updated_time" content="2016-07-27T05:15:03.014Z">
+<meta property="og:updated_time" content="2016-07-27T06:20:07.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义函数">
 <meta name="twitter:description" content="定义函数在用python编写程序过程中，有时会根据需要自己定义函数。在python中，定义一个函数要使用def语句，一次写出函数名，小括号，参数，以及冒号。在缩进块中编写函数体，函数的返回值用return语句返回。例如我们自定义一个求绝对值的函数:
@@ -124,14 +124,21 @@ while n&gt;0:
     n = n-1
     s = s * x
 return s
-</code></pre><p>其中n=2就是默认参数，这样我们在计算类似power（2）时，就相当于调用了power(2,2)<br>当有多个默认参数时，既可以按照默认参数的顺序来，也可以不安顺序，但不安顺序时，<em>需要写上默认参数的参数名</em>。</p>
+</code></pre><p>其中n=2就是默认参数，这样我们在计算类似power（2）时，就相当于调用了power(2,2)<br>当有多个默认参数时，既可以按照默认参数的顺序来，也可以不安顺序，但不安顺序时，<strong>需要写上默认参数的参数名</strong>。定义默认参数的时候我们需要牢记一点就是，默认参数必须指向不变对象！<br>3.可变参数<br>当我们计算函数时，传入的参数可变时时候，这是就会用到可变参数。<br>例如有一组数a,b,c….，我们要计算a+b+c+…,但这是参数个数不定，首先我们将a,b,c….作为一个list或tuple传进来。</p>
+<p> def my_sum(num):</p>
+<pre><code>s = 0
+for i in mum:
+    s = s +i
+return s
+</code></pre><p>在计算之前需要先组装一个list或tuple，即：my_sum([1,2,3])<br>但如果将num改为可变参数后，即</p>
+<p> def my_sum(<em>num)<br>函数的调用变为 my_sum(1,2,3).可变参数只需在参数前面加</em></p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir4ftinj0004n0v9krh43jny" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir4i5f4d0000q8v9bqw869ql" class="article-share-link">Share</a>
       
       
     </footer>

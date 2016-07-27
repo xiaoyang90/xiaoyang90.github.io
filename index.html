@@ -104,14 +104,21 @@ while n&gt;0:
     n = n-1
     s = s * x
 return s
-</code></pre><p>其中n=2就是默认参数，这样我们在计算类似power（2）时，就相当于调用了power(2,2)<br>当有多个默认参数时，既可以按照默认参数的顺序来，也可以不安顺序，但不安顺序时，<em>需要写上默认参数的参数名</em>。</p>
+</code></pre><p>其中n=2就是默认参数，这样我们在计算类似power（2）时，就相当于调用了power(2,2)<br>当有多个默认参数时，既可以按照默认参数的顺序来，也可以不安顺序，但不安顺序时，<strong>需要写上默认参数的参数名</strong>。定义默认参数的时候我们需要牢记一点就是，默认参数必须指向不变对象！<br>3.可变参数<br>当我们计算函数时，传入的参数可变时时候，这是就会用到可变参数。<br>例如有一组数a,b,c….，我们要计算a+b+c+…,但这是参数个数不定，首先我们将a,b,c….作为一个list或tuple传进来。</p>
+<p> def my_sum(num):</p>
+<pre><code>s = 0
+for i in mum:
+    s = s +i
+return s
+</code></pre><p>在计算之前需要先组装一个list或tuple，即：my_sum([1,2,3])<br>但如果将num改为可变参数后，即</p>
+<p> def my_sum(<em>num)<br>函数的调用变为 my_sum(1,2,3).可变参数只需在参数前面加</em></p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir4ftinj0004n0v9krh43jny" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir4i5f4d0000q8v9bqw869ql" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +165,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir4ftinj0002n0v9wmkam90q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir4i5f4z0003q8v97hr5rnuv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -197,7 +204,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir4ftin40000n0v9za3xs81s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir4i5f4i0001q8v9jdxoprl6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +288,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir4ftin40001n0v9gaxjdrol" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir4i5f510004q8v9chuxjs1m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -326,7 +333,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir4ftinj0003n0v9tkr7yp8w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir4i5f4v0002q8v9qk1qof3i" class="article-share-link">Share</a>
       
       
     </footer>
