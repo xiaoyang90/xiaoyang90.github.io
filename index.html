@@ -97,13 +97,21 @@ else:
 </code></pre><p>这里打印看一下-10的绝对值</p>
 <p> print my_abs(-10)<br>结果输出为10<br>当程序在函数体内执行时，当执行到return语句时，函数执行完毕，并将结果返回。但如果没有return语句，函数执行完毕后也会返回。但返回的结果是None。<br>如果已经将定义的函数保存为.py文件了，例如，将my_abs保存为abstest.py文件了，则可以在该文件的当前目录下，启用Python解释器，用from abstest import my_abs来导入此函数。<br>函数可以同时返回多个值，但其实时返回的一个元组tuple。</p>
 </li>
-<li>默认参数<br>在定义函数时有时会经常用到默认参数</li>
+<li><p>默认参数<br>在定义函数时有时会经常用到默认参数。例如：</p>
+<p> def power(x,n=2):</p>
+<pre><code>m = 1
+while n&gt;0:
+    n = n-1
+    s = s * x
+return s
+</code></pre><p>其中n=2就是默认参数，这样我们在计算类似power（2）时，就相当于调用了power(2,2)<br>当有多个默认参数时，既可以按照默认参数的顺序来，也可以不安顺序，但不安顺序时，*需要写上默认参数的参数名。</p>
+</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir4fjac600041cv95ykq6icv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir4frwkl0004v0v9ubevrx2h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -150,7 +158,7 @@ else:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir4fjac600021cv94cgahjvl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir4frwk60000v0v9ayclbt2m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,7 +197,7 @@ else:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir4fjac600011cv99nue5wn5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir4frwkl0001v0v9p91tmcta" class="article-share-link">Share</a>
       
       
     </footer>
@@ -273,7 +281,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir4fjac300001cv9fhh0jjg0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir4frwkl0002v0v9l5d44vot" class="article-share-link">Share</a>
       
       
     </footer>
@@ -318,7 +326,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir4fjac600031cv9je0cmkz0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir4frwkl0003v0v9ai9vgecj" class="article-share-link">Share</a>
       
       
     </footer>
