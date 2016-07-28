@@ -90,14 +90,13 @@
         <p>1.迭代<br>在Python中，除了像list这种有效标的数据类型可以迭代，即使很多数据类型没有下标，但是，只要是可迭代对象，无论有无下标，都可以进行迭代。比如：dic，字符串等。<br>但值得注意的是，默认情况下。dic迭代的是key，但是可以通过d.value获取dict的value，同时也可以通过d.items()同时获取key和value。<br>我们可以通过下面的方式来判断一个对象是否为可迭代对象</p>
 <pre><code>from collections import Iterable
 isinstance(&apos;abc&apos;,Iterable)
-</code></pre><p>同时python中还有内置函数enumerate，可以把list变为变为索引-元素值。<br>2.列表生成式<br>3.生成器<br>我们可以通过列表生成式生成一个列表，但当列表的元素量很大时，会占用很大的存储空间，如果我们仅需要访问前面几个元素的时候，后面绝大多数占用的空间就被浪费了。<br><strong>如果列表中的元素可以按照某种算法推算出来，这是我们就可以使用生成器：generator。generator是一种一边循环一遍计算的机制。</strong><br>创建generator的方法：</p>
-<p>##第一种是将列表生成式的[]改为（）##例如：</p>
-<pre><code>g =（x * x for x in range(1,5)）
+</code></pre><p>同时python中还有内置函数enumerate，可以把list变为变为索引-元素值。<br>2.列表生成式<br>3.生成器<br>我们可以通过列表生成式生成一个列表，但当列表的元素量很大时，会占用很大的存储空间，如果我们仅需要访问前面几个元素的时候，后面绝大多数占用的空间就被浪费了。<br><strong> 如果列表中的元素可以按照某种算法推算出来，这是我们就可以使用生成器：generator。generator是一种一边循环一遍计算的机制。</strong><br>创建generator的方法：</p>
+<h2 id="第一种是将列表生成式的-改为（）-例如："><a href="#第一种是将列表生成式的-改为（）-例如：" class="headerlink" title="第一种是将列表生成式的[]改为（）##例如："></a>第一种是将列表生成式的[]改为（）##例如：</h2><pre><code>g =（x * x for x in range(1,5)）
 </code></pre><p>如果想要打印g中的所有元素，则使用for循环。例如：</p>
 <pre><code>g =（x * x for x in range(1,5)）
 for i in g:
     pring i
-</code></pre><p>##如果一个函数中出现 yield关键字，那么这个函数就不再是普通的函数，而是一个生成器##<br>generator的执行流程和函数的不一样。generator，在每次调用next（）函数的时候执行，遇到yield语句韩慧，再次执行的时候 从上次yield的语句出继续执行。<br>例如：定义一个generator。一次返回2,4,6</p>
+</code></pre><h2 id="如果一个函数中出现-yield关键字，那么这个函数就不再是普通的函数，而是一个生成器"><a href="#如果一个函数中出现-yield关键字，那么这个函数就不再是普通的函数，而是一个生成器" class="headerlink" title="如果一个函数中出现 yield关键字，那么这个函数就不再是普通的函数，而是一个生成器"></a>如果一个函数中出现 yield关键字，那么这个函数就不再是普通的函数，而是一个生成器</h2><p>generator的执行流程和函数的不一样。generator，在每次调用next（）函数的时候执行，遇到yield语句韩慧，再次执行的时候 从上次yield的语句出继续执行。<br>例如：定义一个generator。一次返回2,4,6</p>
 <pre><code>def even():
     print &quot;step1&quot;
     yield 2
@@ -123,7 +122,7 @@ isinstance(x for x in range(5),Iterable)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cir6ayi5z0001z4v9akji71c4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cir6b0ha70004n0v9zvpjjgbw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +185,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir6ayi6e0005z4v9s9gdyug1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir6b0ha70005n0v98bg9yd81" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +232,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir6ayi6b0004z4v9lgmuwwhl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir6b0ha70003n0v93gmtvh71" class="article-share-link">Share</a>
       
       
     </footer>
@@ -272,7 +271,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir6ayi4s0000z4v9kf5ki6eo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir6b0h9r0000n0v93m6hv44g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,7 +355,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir6ayi630002z4v9bdya7h9u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir6b0ha70002n0v9hwnfc8pc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -401,7 +400,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir6ayi670003z4v92dkjhf75" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir6b0h9r0001n0v959i6ed32" class="article-share-link">Share</a>
       
       
     </footer>
