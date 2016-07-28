@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python 基础 | 杨萍的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.迭代在Python中，除了像list这种有效标的数据类型可以迭代，即使很多数据类型没有下标，但是，只要是可迭代对象，无论有无下标，都可以进行迭代。比如：dic，字符串等。但值得注意的是，默认情况下。dic迭代的是key，但是可以通过d.value获取dict的value，同时也可以通过d.items()同时获取key和value。我们可以通过下面的方式来判断一个对象是否为可迭代对象
+from">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 基础">
+<meta property="og:url" content="http://yoursite.com/2016/07/27/python-基础/index.html">
+<meta property="og:site_name" content="杨萍的博客">
+<meta property="og:description" content="1.迭代在Python中，除了像list这种有效标的数据类型可以迭代，即使很多数据类型没有下标，但是，只要是可迭代对象，无论有无下标，都可以进行迭代。比如：dic，字符串等。但值得注意的是，默认情况下。dic迭代的是key，但是可以通过d.value获取dict的value，同时也可以通过d.items()同时获取key和value。我们可以通过下面的方式来判断一个对象是否为可迭代对象
+from">
+<meta property="og:updated_time" content="2016-07-28T12:33:45.537Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python 基础">
+<meta name="twitter:description" content="1.迭代在Python中，除了像list这种有效标的数据类型可以迭代，即使很多数据类型没有下标，但是，只要是可迭代对象，无论有无下标，都可以进行迭代。比如：dic，字符串等。但值得注意的是，默认情况下。dic迭代的是key，但是可以通过d.value获取dict的value，同时也可以通过d.items()同时获取key和value。我们可以通过下面的方式来判断一个对象是否为可迭代对象
+from">
+  
+    <link rel="alternate" href="/atom.xml" title="杨萍的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">杨萍的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">andy&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python-基础" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/27/python-基础/" class="article-date">
+  <time datetime="2016-07-27T08:17:54.000Z" itemprop="datePublished">2016-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python 基础
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.迭代<br>在Python中，除了像list这种有效标的数据类型可以迭代，即使很多数据类型没有下标，但是，只要是可迭代对象，无论有无下标，都可以进行迭代。比如：dic，字符串等。<br>但值得注意的是，默认情况下。dic迭代的是key，但是可以通过d.value获取dict的value，同时也可以通过d.items()同时获取key和value。<br>我们可以通过下面的方式来判断一个对象是否为可迭代对象</p>
+<pre><code>from collections import Iterable
+isinstance(&apos;abc&apos;,Iterable)
+</code></pre><p>同时python中还有内置函数enumerate，可以把list变为变为索引-元素值。<br>2.列表生成式<br>3.生成器<br>我们可以通过列表生成式生成一个列表，但当列表的元素量很大时，会占用很大的存储空间，如果我们仅需要访问前面几个元素的时候，后面绝大多数占用的空间就被浪费了。<br><strong>如果列表中的元素可以按照某种算法推算出来，这是我们就可以使用生成器：generator。generator是一种一边循环一遍计算的机制。</strong><br>创建generator的方法：</p>
+<p>##第一种是将列表生成式的[]改为（）##例如：</p>
+<pre><code>g =（x * x for x in range(1,5)）
+</code></pre><p>如果想要打印g中的所有元素，则使用for循环。例如：</p>
+<pre><code>g =（x * x for x in range(1,5)）
+for i in g:
+    pring i
+</code></pre><p>##如果一个函数中出现 yield关键字，那么这个函数就不再是普通的函数，而是一个生成器##<br>generator的执行流程和函数的不一样。generator，在每次调用next（）函数的时候执行，遇到yield语句韩慧，再次执行的时候 从上次yield的语句出继续执行。<br>例如：定义一个generator。一次返回2,4,6</p>
+<pre><code>def even():
+    print &quot;step1&quot;
+    yield 2
+    print &quot;step2&quot;
+    yield  4
+    print &quot;step3&quot;
+    yield  6
+e = even()
+for i in e:
+    print i
+</code></pre><p>4.迭代器<br>首先我们应该知道什么是可迭代对象：Iterable。包括集合数据类型：list，tuple，dic，set，str，以及generator。可以通过下面的语句判断是不是可迭代对象</p>
+<pre><code>from collections import Iterable
+isinstance([],Iterable)
+isinstance({},Iterable)
+isinstance((x for x in range(5)),Iterable)
+</code></pre><p>可以被next()函数调用并不断返回下一个值得对象称为迭代器：Iterator。<br>可以通过isinstance函数判断一个对象是否是Iterator对象</p>
+<pre><code>from collections import Iterator
+isinstance(x for x in range(5),Iterable)
+</code></pre><p>生成器都是Iterable对象，但list，dic，str虽然是Iterable，但并不是Iterator<br>可以通过下面的语句将list，tuple，dic，str变为Iterator</p>
+<pre><code>isinstance(iter([]),Iterator)
+</code></pre><p>Iterator表示的是一个数据流，我们可以将数据流看成是一个有序数列，但我们并不知道序列的长度，只能通过next（）函数实现按需计算下一个数据，所以Iterator的计算时惰性的，只有在需要返回下一个数据是才会计算。</p>
+<h2 id="参考廖雪峰python3基础教程"><a href="#参考廖雪峰python3基础教程" class="headerlink" title="参考廖雪峰python3基础教程"></a>参考廖雪峰python3基础教程</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cir6ayi5z0001z4v9akji71c4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/27/自定义函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">自定义函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/27/python-基础/">python 基础</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/27/自定义函数/">自定义函数</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/20/Python-中文显示/">Python 中文显示</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/18/FFT/">FFT</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/16/Image-thresholding/">Image thresholding</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
