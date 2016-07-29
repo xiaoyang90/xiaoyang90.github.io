@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>杨萍的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、高阶函数 Higher-order function函数的参数可以接受变量，而变量又可以指向函数，那么一个函数就可以接受另一个函数作为参数，这种函数称之为高阶函数。一个简单的高阶函数：
+def multiply(x,y,f):
+    return f(x) *f(y)
+print
+2.map函数map函数接受两个参数，第一个参数是函数，另一个是Iterable，map将传入的函数依次作用到序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="杨萍的博客">
+<meta property="og:url" content="http://yoursite.com/2016/07/29/python-基础学习2/index.html">
+<meta property="og:site_name" content="杨萍的博客">
+<meta property="og:description" content="1、高阶函数 Higher-order function函数的参数可以接受变量，而变量又可以指向函数，那么一个函数就可以接受另一个函数作为参数，这种函数称之为高阶函数。一个简单的高阶函数：
+def multiply(x,y,f):
+    return f(x) *f(y)
+print
+2.map函数map函数接受两个参数，第一个参数是函数，另一个是Iterable，map将传入的函数依次作用到序">
+<meta property="og:updated_time" content="2016-07-29T09:39:15.375Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="杨萍的博客">
+<meta name="twitter:description" content="1、高阶函数 Higher-order function函数的参数可以接受变量，而变量又可以指向函数，那么一个函数就可以接受另一个函数作为参数，这种函数称之为高阶函数。一个简单的高阶函数：
+def multiply(x,y,f):
+    return f(x) *f(y)
+print
+2.map函数map函数接受两个参数，第一个参数是函数，另一个是Iterable，map将传入的函数依次作用到序">
+  
+    <link rel="alternate" href="/atom.xml" title="杨萍的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">杨萍的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">andy&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python-基础学习2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/29/python-基础学习2/" class="article-date">
+  <time datetime="2016-07-29T02:08:41.000Z" itemprop="datePublished">2016-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、高阶函数 Higher-order function<br>函数的参数可以接受变量，而变量又可以指向函数，那么一个函数就可以接受另一个函数作为参数，这种函数称之为高阶函数。<br>一个简单的高阶函数：</p>
+<pre><code>def multiply(x,y,f):
+    return f(x) *f(y)
+print
+</code></pre><p>2.map函数<br>map函数接受两个参数，第一个参数是函数，另一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator，Iterator为一个惰性序列，可以通过list（）将整个序列都显示出来并返回一个list。<br>例如：</p>
+<pre><code>def f(x):
+    return x * x *x
+r = map(f,[1,2,3])
+print list(r)
+</code></pre><p>利用map（）函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范 名字。输入：[‘adam’,’LISA’,’barT’], 输出：[‘Adam’,’Lisa’,’Bart’]</p>
+<p>3.reduce函数<br>reduce也是将一个函数作用于一个序列，但是这个函数必须接受两个参数，reduce把结果继续和序列的下一个元素做累积计算，记过就是：</p>
+<pre><code>reduce(f,[x1,x2,x3,x4]) = f(f(f(x1,x2),x3),x4)
+</code></pre><p>例如，我们想要将一个序列[1,2,3,4,5]变为12345.实现方法：</p>
+<pre><code>from functools import reduce
+def f(x,y):
+    return 10 * x + y
+print reduce(f,[1,2,3,4,5])
+</code></pre><p>定义一个函数，用于求列表中所有数的乘积</p>
+<pre><code>def prod(L):
+    def f(x,y):
+        return  x * y
+    return reduce(f,L)
+L = [2,3,4,5]
+print prod(L)
+</code></pre><p>4.filter函数<br>filter函数也接受一个函数以及一个序列，但是filter（）把传入的函数一次作用于每个元素，然后根据返回值是True还是Flase决定保留还是丢弃该元素。<br>filter（）函数返回的时一个Iterator，即惰性序列，所以要强迫filter（）完成计算，需要用到list（）函数 获得所欲结果并返回。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/29/python-基础学习2/" data-id="cir7k5enm0003nov9v3gz9e2k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/27/python-基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python 基础</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/29/python-基础学习2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/27/python-基础/">python 基础</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/27/自定义函数/">自定义函数</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/20/Python-中文显示/">Python 中文显示</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/18/FFT/">FFT</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
