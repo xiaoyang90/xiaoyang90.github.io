@@ -65,6 +65,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Python基础学习3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/29/Python基础学习3/" class="article-date">
+  <time datetime="2016-07-29T13:51:18.000Z" itemprop="datePublished">2016-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/29/Python基础学习3/">Python基础学习3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、什么是lambda?<br>我们可以认为lambda定义了一个匿名函数。例如：</p>
+<pre><code>g = lambda x:x+1
+print g(1)
+</code></pre><p>上述代码x为入口参数，x+1为函数体。这样使得函数更加简洁，直观。<br>2、排序算法<br>Python内置的sorted（）函数就可以对list进行排序:例如：</p>
+<pre><code>sorted（[1,2,3,2,1]）
+</code></pre><p>sorted（）函数也是一个高阶函数，可以接受一个key函数来实现自定义排序。例如，按照绝对值大小进行排序：</p>
+<pre><code>Ｌ＝　［－４，２，１，８，－７］
+print sorted (L,key = abs)
+</code></pre><p>key指定的函数将作用与list的每一个元素上，并根据key函数返回的结果进行排序。然后sorted（）按照keys（）进行排序，并且按照对应关系返回到list相应的元素。 </p>
+<h2 id="默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse-True。例如："><a href="#默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse-True。例如：" class="headerlink" title="默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse= True。例如："></a>默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse= True。例如：</h2><pre><code>sorted（[&quot;Yang&quot;,&quot;du&quot;,&quot;&quot;zhang&quot;，&quot;wang&quot;],key = str.lower,reverse = True）
+</code></pre><p>3返回函数<br>高阶函数除了可以将函数作为参数以外，还可以将函数作为返回值。<br>例如：下面是一个参数为可变参数的求和函数</p>
+<pre><code>def sum(*args):
+    s = 0
+    for i in args:
+        s = s + i
+    return s
+</code></pre><p>当我们不需要马上求和，而是根据后面的需要在计算时，我们可以不返回结果，而是返回函数。</p>
+<pre><code>def lazy_sum(*args):
+    def sum():
+         = 0
+        for i in args:
+        s = s + i
+        return s
+    return sum
+</code></pre><p>这样调用函数lazy_sum()时。返回的不是结果，而是函数。</p>
+<pre><code>f = lazy_sum(1,2,3,4)
+&gt;&gt;f
+&lt;function lazy_sum.&lt;locals&gt;.sum at 0x101c6ed90&gt;
+</code></pre><p>当调用函数f(x)时，返回的才是结果。</p>
+<pre><code>&gt;&gt;&gt;f()
+</code></pre><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种结构成为闭包（closure）。<br>4、匿名函数<br>当我们传入函数时，不需要显示的定义函数，直接传入匿名函数更方便，而且使用匿名函数的另一个优点是，不必担心函数名冲突。例如：</p>
+<pre><code>list([map(lambda x:x * x,[1,2,3,4])])
+</code></pre><p>lambda表示匿名函数，冒号前表示函数参数，匿名函数也可以赋值给一个变量，然后通过变量啦调用该函数。<br>5.偏函数<br>Python的模块functools的功能很多，其中一个就是偏函数，partial function。<br>functools.partial就是创建一个偏函数，例如，创建一个将二进制转换为整数的函数：</p>
+<pre><code>import functools
+int2 = functools.partial(int,base = 2)
+</code></pre><p>functools.partial的作用就是，把一个函数的某些参数设为默认参数，返回一个新的函数，调用这个新的函数更加方便。<br>base = 2相当与固定了int()函数的关键字参数。</p>
+<pre><code>max2 = functools.partial(max,10)
+max2(5,6,7)
+</code></pre><p>上面程序的运算结果是10。实际上是把10作为*args的一部分自动加到左边。<br>相当于：</p>
+<pre><code>args= （10，5,6,7）
+max(*args)
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/29/Python基础学习3/" data-id="cir8yauwv0001e8v9f6pdtbjv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-python-基础学习2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/07/29/python-基础学习2/" class="article-date">
@@ -106,7 +183,7 @@ print prod(L)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/python-基础学习2/" data-id="cir7k5enm0003nov9v3gz9e2k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/python-基础学习2/" data-id="cir8yauxy0007e8v93giwd39v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -173,7 +250,7 @@ isinstance(x for x in range(5),Iterable)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cir7k5enu0005nov9c5wt6zdi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cir8yauxu0006e8v95yk6ujzp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +313,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir7k5enu0006nov93b9803ff" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir8yauxq0005e8v9cldlf4qc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +360,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir7k5eni0002nov97c2usxjf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir8yauwz0002e8v9zbebpd9r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,7 +399,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir7k5enf0001nov9jxc7nkmh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir8yaux30003e8v9obelr32z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -406,7 +483,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir7k5em60000nov9f1ppcuqa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir8yauwr0000e8v9w030ukao" class="article-share-link">Share</a>
       
       
     </footer>
@@ -451,7 +528,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir7k5enq0004nov9cf983efr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir8yauxq0004e8v9bu50elyt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -491,6 +568,10 @@ else
       <ul>
         
           <li>
+            <a href="/2016/07/29/Python基础学习3/">Python基础学习3</a>
+          </li>
+        
+          <li>
             <a href="/2016/07/29/python-基础学习2/">(no title)</a>
           </li>
         
@@ -504,10 +585,6 @@ else
         
           <li>
             <a href="/2016/07/20/Python-中文显示/">Python 中文显示</a>
-          </li>
-        
-          <li>
-            <a href="/2016/07/18/FFT/">FFT</a>
           </li>
         
       </ul>
