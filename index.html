@@ -95,8 +95,8 @@ print g(1)
 </code></pre><p>sorted（）函数也是一个高阶函数，可以接受一个key函数来实现自定义排序。例如，按照绝对值大小进行排序：</p>
 <pre><code>Ｌ＝　［－４，２，１，８，－７］
 print sorted (L,key = abs)
-</code></pre><p>key指定的函数将作用与list的每一个元素上，并根据key函数返回的结果进行排序。然后sorted（）按照keys（）进行排序，并且按照对应关系返回到list相应的元素。 </p>
-<h2 id="默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse-True。例如："><a href="#默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse-True。例如：" class="headerlink" title="默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse= True。例如："></a>默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse= True。例如：</h2><pre><code>sorted（[&quot;Yang&quot;,&quot;du&quot;,&quot;&quot;zhang&quot;，&quot;wang&quot;],key = str.lower,reverse = True）
+</code></pre><p>key指定的函数将作用与list的每一个元素上，并根据key函数返回的结果进行排序。然后sorted（）按照keys（）进行排序，并且按照对应关系返回到list相应的元素。<br><strong> 默认情况下对字符串排序是按照ASCII大小进行的。但如果要对字符串进行排序，应该用key函数将字符串大小映射为忽略大小写。如果要进行饭箱排序，可以掺入第三个参数，reverse= True。例如：</strong></p>
+<pre><code>sorted（[&quot;Yang&quot;,&quot;du&quot;,&quot;&quot;zhang&quot;，&quot;wang&quot;],key = str.lower,reverse = True）
 </code></pre><p>3返回函数<br>高阶函数除了可以将函数作为参数以外，还可以将函数作为返回值。<br>例如：下面是一个参数为可变参数的求和函数</p>
 <pre><code>def sum(*args):
     s = 0
@@ -132,7 +132,7 @@ max(*args)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/Python基础学习3/" data-id="cir8yauwv0001e8v9f6pdtbjv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/Python基础学习3/" data-id="cir8yed5w00034cv9kmgo14w2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,7 +183,7 @@ print prod(L)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/python-基础学习2/" data-id="cir8yauxy0007e8v93giwd39v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/python-基础学习2/" data-id="cir8yed6c00064cv9g136jgkr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +250,7 @@ isinstance(x for x in range(5),Iterable)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cir8yauxu0006e8v95yk6ujzp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cir8yed5w00054cv9xfqmdxbf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -313,7 +313,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir8yauxq0005e8v9cldlf4qc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cir8yed6c00074cv9dpg3ubni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -360,7 +360,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir8yauwz0002e8v9zbebpd9r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cir8yed5w00024cv907xda5zo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -399,7 +399,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir8yaux30003e8v9obelr32z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cir8yed5w00014cv9y88ruvrb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -483,7 +483,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir8yauwr0000e8v9w030ukao" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cir8yed5w00004cv9wn1adzah" class="article-share-link">Share</a>
       
       
     </footer>
@@ -528,7 +528,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir8yauxq0004e8v9bu50elyt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/hello-world/" data-id="cir8yed5w00044cv9tlpza72l" class="article-share-link">Share</a>
       
       
     </footer>
