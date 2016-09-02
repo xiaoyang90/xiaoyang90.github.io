@@ -3,30 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Python 中文显示 | 杨萍的博客</title>
+  <title>图像分割 | 杨萍的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：
-# -*- coding:utf-8 -*-
-声明编码方式为utf-8编码，并且在中文之前添加u，例如：
-plt.xlabel(u&amp;quot;时间&amp;quot;)
-但是仍然出现无法正常显示中文的情况。这时，从matplotlib.fo">
+  <meta name="description" content="图像分割使图像分析和模式识别的首要问题。目前常用的图像分割方法有：直方图阈值法、聚类法、区域生长法、边缘检测法、模糊法、人工神经网络法等。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 中文显示">
-<meta property="og:url" content="http://yoursite.com/2016/07/20/Python-中文显示/index.html">
+<meta property="og:title" content="图像分割">
+<meta property="og:url" content="http://yoursite.com/2016/09/02/图像分割/index.html">
 <meta property="og:site_name" content="杨萍的博客">
-<meta property="og:description" content="在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：
-# -*- coding:utf-8 -*-
-声明编码方式为utf-8编码，并且在中文之前添加u，例如：
-plt.xlabel(u&amp;quot;时间&amp;quot;)
-但是仍然出现无法正常显示中文的情况。这时，从matplotlib.fo">
-<meta property="og:updated_time" content="2016-07-20T14:45:23.463Z">
+<meta property="og:description" content="图像分割使图像分析和模式识别的首要问题。目前常用的图像分割方法有：直方图阈值法、聚类法、区域生长法、边缘检测法、模糊法、人工神经网络法等。">
+<meta property="og:updated_time" content="2016-09-02T01:26:23.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 中文显示">
-<meta name="twitter:description" content="在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：
-# -*- coding:utf-8 -*-
-声明编码方式为utf-8编码，并且在中文之前添加u，例如：
-plt.xlabel(u&amp;quot;时间&amp;quot;)
-但是仍然出现无法正常显示中文的情况。这时，从matplotlib.fo">
+<meta name="twitter:title" content="图像分割">
+<meta name="twitter:description" content="图像分割使图像分析和模式识别的首要问题。目前常用的图像分割方法有：直方图阈值法、聚类法、区域生长法、边缘检测法、模糊法、人工神经网络法等。">
   
     <link rel="alternate" href="/atom.xml" title="杨萍的博客" type="application/atom+xml">
   
@@ -79,10 +67,10 @@ plt.xlabel(u&amp;quot;时间&amp;quot;)
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Python-中文显示" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-图像分割" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/20/Python-中文显示/" class="article-date">
-  <time datetime="2016-07-20T14:08:22.000Z" itemprop="datePublished">2016-07-20</time>
+    <a href="/2016/09/02/图像分割/" class="article-date">
+  <time datetime="2016-09-02T01:23:27.000Z" itemprop="datePublished">2016-09-02</time>
 </a>
     
   </div>
@@ -93,7 +81,7 @@ plt.xlabel(u&amp;quot;时间&amp;quot;)
         
   
     <h1 class="article-title" itemprop="name">
-      Python 中文显示
+      图像分割
     </h1>
   
 
@@ -101,22 +89,12 @@ plt.xlabel(u&amp;quot;时间&amp;quot;)
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在使用Pycharm编写Python程序时，在程序中出现中文，但却无法显示中文。在settings中将IDE Encoding改为UTF-8编码，并且在程序开头使用：</p>
-<pre><code># -*- coding:utf-8 -*-
-</code></pre><p>声明编码方式为utf-8编码，并且在中文之前添加u，例如：</p>
-<pre><code>plt.xlabel(u&quot;时间&quot;)
-</code></pre><p>但是仍然出现无法正常显示中文的情况。<br>这时，从matplotlib.font_manager模块中导入FontProperties:</p>
-<pre><code>from matplotlib.font_manager import FontProperties
-</code></pre><p>并且通过以下语句添加中文字体，并且可以更改字体大小：</p>
-<pre><code>font = FontProperties(fname = r&quot;C:\windows\fonts\simsun.ttc&quot;,size = 20)
-</code></pre><p>此时：</p>
-<pre><code>plt.xlabel(u&quot;时间&quot;,fontproperties=font)
-</code></pre><p>就可以正常显示中文了。</p>
+        <p>图像分割使图像分析和模式识别的首要问题。目前常用的图像分割方法有：直方图阈值法、聚类法、区域生长法、边缘检测法、模糊法、人工神经网络法等。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cisl34a6l000248v9ajniwh3r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/02/图像分割/" data-id="cisl34a74000548v9wd7vj5eq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -125,19 +103,10 @@ plt.xlabel(u&amp;quot;时间&amp;quot;)
     
 <nav id="article-nav">
   
-    <a href="/2016/07/27/自定义函数/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          自定义函数
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/18/FFT/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/08/15/Pycharm-show-matrix/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">FFT</div>
+      <div class="article-nav-title">Pycharm show matrix</div>
     </a>
   
 </nav>
