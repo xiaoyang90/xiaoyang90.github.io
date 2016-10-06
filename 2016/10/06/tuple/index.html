@@ -9,7 +9,7 @@
 &amp;gt;&amp;gt;&amp;gt;t = (1,)
 &amp;gt;&amp;gt;&amp;gt;t
 &amp;gt;&amp;gt;&amp;gt;(1,)
-2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。    s = input(“birth:”)    birth = int(s)">
+2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。    s = input(“birth:”)    birth = int(s)3、判断key是否存在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础易错点">
 <meta property="og:url" content="http://yoursite.com/2016/10/06/tuple/index.html">
@@ -18,15 +18,15 @@
 &amp;gt;&amp;gt;&amp;gt;t = (1,)
 &amp;gt;&amp;gt;&amp;gt;t
 &amp;gt;&amp;gt;&amp;gt;(1,)
-2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。    s = input(“birth:”)    birth = int(s)">
-<meta property="og:updated_time" content="2016-10-06T04:44:29.313Z">
+2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。    s = input(“birth:”)    birth = int(s)3、判断key是否存在">
+<meta property="og:updated_time" content="2016-10-06T08:06:48.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础易错点">
 <meta name="twitter:description" content="1、只有一个元素的元组定义时必须加一个“，”，来消除歧义。例如：
 &amp;gt;&amp;gt;&amp;gt;t = (1,)
 &amp;gt;&amp;gt;&amp;gt;t
 &amp;gt;&amp;gt;&amp;gt;(1,)
-2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。    s = input(“birth:”)    birth = int(s)">
+2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。    s = input(“birth:”)    birth = int(s)3、判断key是否存在">
   
     <link rel="alternate" href="/atom.xml" title="杨萍的博客" type="application/atom+xml">
   
@@ -105,12 +105,18 @@
 <pre><code>&gt;&gt;&gt;t = (1,)
 &gt;&gt;&gt;t
 &gt;&gt;&gt;(1,)
-</code></pre><p>2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。<br>    s = input(“birth:”)<br>    birth = int(s)</p>
-
+</code></pre><p>2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。<br>    s = input(“birth:”)<br>    birth = int(s)<br>3、判断key是否存在于字典中的方法：一种时通过in判断：</p>
+<pre><code>&gt;&gt;&gt;‘Andy’ in d
+False
+</code></pre><p>第二种就是通过dict提供的get方法：若不存在，则返回None，同时也可以自己指定返回值的大小</p>
+<pre><code>&gt;&gt;&gt;d.get(&apos;Andy&apos;)
+&gt;&gt;&gt;d.get(&apos;Andy&apos;,-1)
+-1
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/06/tuple/" data-id="citxuzsfk0005pkv9tub3t4v5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/06/tuple/" data-id="city284ev0005dkv9sjs9cxp8" class="article-share-link">Share</a>
       
       
     </footer>
