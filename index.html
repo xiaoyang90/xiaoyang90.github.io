@@ -98,12 +98,22 @@ False
 <pre><code>&gt;&gt;&gt;d.get(&apos;Andy&apos;)
 &gt;&gt;&gt;d.get(&apos;Andy&apos;,-1)
 -1
-</code></pre><p>作为dict的key值是不可变的，由于list可变，因此list不能作为key值。</p>
-
+</code></pre><p>作为dict的key值是不可变的，由于list可变，因此list不能作为key值。<br>4、对于可变对象list内部进行操作，list会改变</p>
+<pre><code>&gt;&gt;&gt;a = [&apos;a&apos;,&apos;c&apos;,&apos;b&apos;]
+&gt;&gt;&gt;a.sort()
+&gt;&gt;&gt;a
+[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]
+</code></pre><p>对于不可变对象，比如str，对str进行操作，str并不会发生改变</p>
+<pre><code>&gt;&gt;&gt;a = &apos;ABC&apos;
+&gt;&gt;&gt;a.replace(&apos;A&apos;,&apos;a&apos;)
+&apos;aBC&apos;
+&gt;&gt;&gt;a
+&apos;ABC&apos;
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/06/tuple/" data-id="city2bb5n0008t0v9c5c683qh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/06/tuple/" data-id="cityivkw90002bsv9xkv1ts1f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -140,7 +150,7 @@ False
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/02/图像分割/" data-id="city2bb5n0009t0v9lq8pjrn3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/02/图像分割/" data-id="cityivkw90005bsv90xwkram6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +187,7 @@ False
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/15/Pycharm-show-matrix/" data-id="city2bb510002t0v9nb086wr8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/15/Pycharm-show-matrix/" data-id="cityivkvt0001bsv9hppwyg4x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -254,7 +264,7 @@ max(*args)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/Python基础学习3/" data-id="city2bb510004t0v9sr1bc49w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/Python基础学习3/" data-id="cityivkwq0006bsv9ywa9i0s0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -305,7 +315,7 @@ print prod(L)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/python-基础学习2/" data-id="city2bb5n0007t0v9ucnl4n7o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/python-基础学习2/" data-id="cityivkwu0008bsv9bdt3ehqe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,7 +382,7 @@ isinstance(x for x in range(5),Iterable)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="city2bb5n0006t0v92ppvj66j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/python-基础/" data-id="cityivkwu0007bsv9zv2rmtgd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -435,7 +445,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="city2bb5n000at0v9hm20x39u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/27/自定义函数/" data-id="cityivkxb000absv90eo51pq7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -482,7 +492,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="city2bb510003t0v9v0yx5i2y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/20/Python-中文显示/" data-id="cityivkw90004bsv9ihjerehi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -521,7 +531,7 @@ return s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="city2bb510000t0v9sbl3lvte" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/18/FFT/" data-id="cityivkuy0000bsv98qtw291k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -605,7 +615,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="city2bb510001t0v9ab2efyfy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/16/Image-thresholding/" data-id="cityivkw90003bsv9ajye13q2" class="article-share-link">Share</a>
       
       
     </footer>
