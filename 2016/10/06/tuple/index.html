@@ -19,7 +19,7 @@
 &amp;gt;&amp;gt;&amp;gt;t
 &amp;gt;&amp;gt;&amp;gt;(1,)
 2、input返回的数据类型是str，在和整数进行比较之前，需要先将str装换成整数。python提供了int（）函数来实现。    s = input(“birth:”)    birth = int(s)3、判断key是否存在">
-<meta property="og:updated_time" content="2016-10-06T08:06:48.835Z">
+<meta property="og:updated_time" content="2016-10-06T08:09:32.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础易错点">
 <meta name="twitter:description" content="1、只有一个元素的元组定义时必须加一个“，”，来消除歧义。例如：
@@ -112,11 +112,12 @@ False
 <pre><code>&gt;&gt;&gt;d.get(&apos;Andy&apos;)
 &gt;&gt;&gt;d.get(&apos;Andy&apos;,-1)
 -1
-</code></pre>
+</code></pre><p>作为dict的key值是不可变的，由于list可变，因此list不能作为key值。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/06/tuple/" data-id="city284ev0005dkv9sjs9cxp8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/06/tuple/" data-id="city2bb5n0008t0v9c5c683qh" class="article-share-link">Share</a>
       
       
     </footer>
